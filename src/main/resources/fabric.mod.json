@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "toomanyanimations",
+  "version": "${version}",
+  "name": "Too Many Animations",
+  "description": "",
+  "authors": ["Vic is a Cat"],
+  "contact": {
+    "homepage": "https://github.com/viciscat/TooManyAnimations",
+    "issues": "https://github.com/viciscat/TooManyAnimations/issues",
+    "sources": "https://github.com/viciscat/TooManyAnimations"
+  },
+  "license": "MIT",
+  "icon": "assets/toomanyanimations/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "io.github.viciscat.toomanyanimations.client.TooManyAnimationsClient"
+    ],
+    "main": [
+      "io.github.viciscat.toomanyanimations.TooManyAnimations"
+    ]
+  },
+  "mixins": [
+    "toomanyanimations.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
