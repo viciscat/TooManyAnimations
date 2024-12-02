@@ -1,6 +1,7 @@
 package io.github.viciscat.toomanyanimations.mixin;
 
 import io.github.viciscat.toomanyanimations.TheSilliesOfInterfaces;
+import io.github.viciscat.toomanyanimations.TooManyAnimations;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.model.ModelPartBuilder;
 import net.minecraft.client.model.ModelTransform;
@@ -22,9 +23,7 @@ public abstract class ModelPartMixin implements TheSilliesOfInterfaces {
         silly = false;
     }
 
-    @Shadow public abstract void setTransform(ModelTransform rotationData);
-
-    @Shadow public abstract ModelTransform getDefaultTransform();
+    @Shadow public abstract void resetTransform();
 
     @Inject(method = {
             "rotate(Lorg/joml/Quaternionf;)V",
@@ -35,7 +34,7 @@ public abstract class ModelPartMixin implements TheSilliesOfInterfaces {
     }, at = @At("HEAD"))
 
     private void animationsGoByeBye(CallbackInfo ci) {
-        if (silly) setTransform(getDefaultTransform());
+        if (TooManyAnimations.enabled && silly) resetTransform();
     }
 
     @Mixin(ModelPartBuilder.class)

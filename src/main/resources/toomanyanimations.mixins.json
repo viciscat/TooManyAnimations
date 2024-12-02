@@ -7,6 +7,8 @@
   ],
   "client": [
     "ArmorStandEntityModelMixin",
+    "GameOptionsMixin",
+    "MinecraftClientMixin",
     "ModelPartDataMixin",
     "ModelPartMixin",
     "ModelPartMixin$BuilderMixin",
