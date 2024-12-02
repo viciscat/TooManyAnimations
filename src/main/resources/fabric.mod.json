@@ -3,7 +3,7 @@
   "id": "toomanyanimations",
   "version": "${version}",
   "name": "Too Many Animations",
-  "description": "",
+  "description": "There are too many animations in this game! This mod fixes that.",
   "authors": ["Vic is a Cat"],
   "contact": {
     "homepage": "https://github.com/viciscat/TooManyAnimations",
